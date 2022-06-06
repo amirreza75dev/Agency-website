@@ -1,0 +1,185 @@
+.navbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+.navbar-bg{
+    background: black;
+}
+
+.navbar-container{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+
+
+}
+.navbar-container h1{
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0.5;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+}
+.nav-links p{
+    
+    padding: 8px 12px;
+    border-radius: 15px;
+
+}
+.nav-links a{
+    color: white;
+}
+.active{
+    border-bottom: 3px solid rgb(27, 241, 56);
+}
+
+.nav-links p:hover{
+    background: rgb(27, 241, 56);
+    
+
+}
+
+.navbar-container button{
+    background: rgb(27, 241, 56);
+    border-radius: 20%;
+    padding: 5px 10px;
+    border: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+
+}
+
+.hamber-menu{
+    display: none;
+    z-index: 5;
+}
+
+.toggle-menu{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0 ;
+    left: 0;
+    background: black;
+    z-index: 5;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column; */
+    transform: translateY(-100%);
+    transition: 0.3s ease-in-out;
+    z-index: 52;
+}
+.toggle-menu-active{
+        transform: translateY(-100%);
+    }
+
+.close-conitaner{
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.close-icon{
+    margin: 10px;
+    color: red;
+    transform: scale(1.8);
+}
+.toggle-links{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+    flex-direction: column;
+    color: white;
+    font-size: 1.8em;
+    margin-top: 20px;
+    z-index: 100;
+
+}
+.toggle-links p{
+    padding: 10px 0;
+    cursor: pointer;
+    color: white;
+
+}
+.toggle-links a{
+    color: white;
+}
+.toggle-links p:hover{
+    background: wheat;
+    color: black;
+}
+.toggle-links p:hover a{
+    
+    color: black;
+}
+.toggle-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+
+}
+.toggle-button button{
+    background: rgb(27, 241, 56);
+    color: white;
+    font-size: 2em;
+    border-radius: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+
+}
+
+
+@media screen and (max-width: 650px) {
+    .hamber-menu{
+        display: block;
+        cursor: pointer;
+        
+        color: white;
+        
+    }
+    .menu-icon{
+        transform: scale(1.5);
+        
+    }
+    .navbar-container button{
+        display: none;
+
+    
+    }
+    .nav-links{
+        display: none;
+
+    }
+    .toggle-menu-active{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0 ;
+        left: 0;
+        background: black;
+        z-index: 5;
+        transform: translateY(0);
+        transition: 0.5s ease-in-out;
+    }
+
+    
+}
